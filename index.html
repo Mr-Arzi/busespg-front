@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD de Autobuses</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 200px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 6px 12px;
+    }
+
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Consumo de REST-API de Autobuses 🚌</h2>
+
+  <!-- Campo oculto para saber si estamos actualizando -->
+  <input type="hidden" id="busId">
+
+  <div>
+    <label>Placa</label><br>
+    <input type="text" id="plate">
+  </div>
+
+  <div>
+    <label>Marca</label><br>
+    <input type="text" id="brand">
+  </div>
+
+  <div>
+    <label>Modelo</label><br>
+    <input type="text" id="model">
+  </div>
+
+  <div>
+    <label>Año</label><br>
+    <input type="number" id="year">
+  </div>
+
+  <div>
+    <label>Estado</label><br>
+    <input type="text" id="status">
+  </div>
+
+  <div>
+    <label>Comentarios</label><br>
+    <input type="text" id="comments">
+  </div>
+
+  <button id="submitBtn" onclick="postBus()">Guardar</button>
+  <button onclick="getBuses()">Cargar Autobuses</button>
+
+  <div id="resultado"></div>
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Tu script de lógica -->
+  <script src="callrestapi.js"></script>
+
+</body>
+</html>
+
