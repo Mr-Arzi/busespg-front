@@ -1,5 +1,5 @@
-var url = "http://localhost:8080/api/buses";
-// var url = "https://restapi-mrarzi.onrender.com/api/buses";
+//var url = "http://localhost:8080/api/buses";
+ var url = "https://busespg-restapi.onrender.com/api/buses";
 
 function postBus() {
   const busId = $('#busId').val();
